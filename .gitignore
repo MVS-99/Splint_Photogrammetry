@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+meshapp/frontend/node_modules
+meshapp/frontend/.pnp
+meshapp/frontend/.pnp.js
+
+# testing
+meshapp/frontend/coverage
+
+# production
+meshapp/frontend/build
+
+# misc
+meshapp/frontend/.DS_Store
+meshapp/frontend/.env.local
+meshapp/frontend/.env.development.local
+meshapp/frontend/.env.test.local
+meshapp/frontend/.env.production.local
+
+meshapp/frontend/npm-debug.log*
+meshapp/frontend/yarn-debug.log*
+meshapp/frontend/yarn-error.log*

@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(to bottom, #d4d4d4, #e6e6e6);
+  align-items : center;
+  color: #555;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.trademark {
+  font-style: italic;
+}
+
+.footer p {
+  margin: 0;
+  padding: 5px;
+}

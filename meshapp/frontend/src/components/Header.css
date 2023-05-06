@@ -1,0 +1,27 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.UC3MLogo,
+.MeshroomLogo {
+  height: 60px;
+  margin: 0 10px;
+}
+
+.Separator {
+  width: 2px;
+  height: 40px;
+  background-color: #333;
+  margin: 0 10px;
+}
+
+.AppTitle {
+  text-align: center;
+  margin: 10px;
+}
+
