@@ -1,95 +1,101 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Header from './components/Header';
-import './App.css';
-import LoadingScreen from './components/LoadingScreen';
-import Footer from './components/Footer';
+import React, { useState } from "react";
+import axios from "axios";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import LoadingScreen from "./components/LoadingScreen";
+import Slideshow from "./components/Slideshow";
+import "./App.css";
 
 function App() {
-    // Crear variables de estado para los siguientes procesos:
-    // Obtener/Manipular las imágenes
-    const [selectedFiles, setSelectedFiles] = useState([]);
-    const [previews, setPreviews] = useState([])
+  const [selectedFiles, setSelectedFiles] = useState(null);
+  const [previews, setPreviews] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-    // Estados correspondientes a carga, procesado y finalización satisfactoria
-    // Previsiblemente, el usuario va a estar esperando en un ratio inversamente proporcional
-    // al poder de computación del servidor cloud. Por lo que he decidido
-    // crear diversas etapas para amenizar el proceso, visualmente.
-    const [isProcessing, setIsProcessing] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
+  const handleFileSelect = (e) => {
+    const files = e.target.files;
+    if (files.length < 20) {
+      alert("Please select 20 or more images.");
+      return;
+    }
+    setSelectedFiles(files);
+    const previewURLs = Array.from(files).map((file) => URL.createObjectURL(file));
+    setPreviews(previewURLs);
+  };
 
-    // Función -> Manejar la selección de archivos
-    const handleFileInputChange = (e) => {
-        const files = e.target.files;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        if (files.length < 10) {
-            alert('Please select at least 10 images');
-            return;
-        }
+    if (!selectedFiles) {
+      alert("Please select images to upload.");
+      return;
+    }
 
-        setSelectedFiles(files)
-        
-        setPreviews(Array.from(files).map((file) => URL.createObjectURL(file)));
-    };
+    setLoading(true);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const formData = new FormData();
+    Array.from(selectedFiles).forEach((file) => {
+      formData.append("files", file);
+    });
 
-        setIsProcessing(true);
+    try {
+      const response = await axios.post("http://localhost:5000/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
 
-        const formData = new FormData();
+      if (response.status === 200) {
+        setLoading(false);
+        setShowSuccess(true);
+        setTimeout(() => {
+          setShowSuccess(false);
+          setSelectedFiles(null);
+          setPreviews([]);
+        }, 60000);
+      }
+    } catch (error) {
+      setLoading(false);
+      alert("An error occurred while processing the images. Please try again.");
+    }
+  };
 
-        for (const file of selectedFiles) {
-          formData.append('files', file);
-        }
-
-        try {
-          await axios.post('http://localhost:5000/upload', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
-
-          setIsSuccess(true);
-          setTimeout(() => {
-            setIsSuccess(false);
-            setIsProcessing(false);
-          }, 60000);
-        } catch (error) {
-          console.error('Error uploading files:', error);
-          setIsProcessing(false);
-          alert('An error occurred while processing the images. Please try again.');
-        }
-    };
-    return (
-        <div className="App">
-            <Header />
-            <h1 className="App-title">UC3M Meshroom 3D Conversion</h1>
-            <input
-                type="file"
-                name="file"
-                id="file"
-                multiple
-                onChange={handleFileInputChange}
-            />
-            <button onClick={handleSubmit} disabled={isProcessing || selectedFiles.length === 0}>
-                {isProcessing ? 'Processing...' : 'Upload Images'}
-            </button>
-        <div className="image-previews">
-            {previews.map((preview, index) => (
-                <img key={index} src={preview} alt={`Preview ${index + 1}`} className="image-preview" />
-            ))}
-        </div>
-        {isSuccess && (
+  return (
+    <div className="App">
+      <Header />
+      {loading ? (
+        <LoadingScreen />
+      ) : (
+        <div className="content">
+          {showSuccess ? (
             <div className="success-message">
-                <p>Success! Your 3D mesh has been generated and downloaded.</p>
-                <p>You will be redirected to the initial screen in a moment.</p>
+              <h2>Success!</h2>
+              <p>Your 3D mesh has been generated successfully. It will be downloaded shortly.</p>
             </div>
-        )}
-        {isProcessing && <LoadingScreen />}
-        <Footer />
+          ) : (
+            <div className="upload-form-container">
+              <form onSubmit={handleSubmit} className="upload-form">
+                <input
+                  type="file"
+                  name="files"
+                  id="files"
+                  multiple
+                  accept="image/*"
+                  onChange={handleFileSelect}
+                />
+                <label htmlFor="files" className="upload-label">
+                  Choose Images
+                </label>
+                <button type="submit" className="upload-button">
+                  Upload
+                </button>
+              </form>
+              {previews.length > 0 && <Slideshow images={previews} />}
+            </div>
+          )}
         </div>
-    );
+      )}
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
