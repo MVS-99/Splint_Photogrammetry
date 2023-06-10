@@ -38,7 +38,7 @@ def upload_file():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         # Abrir Meshroom para las imágenes subidas
-        meshroom_command = f"meshroom_batch --input {UPLOAD_FOLDER} --output{OUTPUT_FOLDER}"
+        meshroom_command = f"~/Meshroom/meshroom_batch --input {UPLOAD_FOLDER} --output{OUTPUT_FOLDER}"
         subprocess.run(meshroom_command, shell=True)
 
         # Crear un ZIP con los archivos mesh generados

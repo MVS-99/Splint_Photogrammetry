@@ -14,7 +14,7 @@
 
 .slide {
   display: inline-block;
-  height: 300px; /* Adjust the height to create more space for the image */
+  height: 400px; /* Adjust the height to create more space for the image */
   width: 100%;
   text-align: center;
 }

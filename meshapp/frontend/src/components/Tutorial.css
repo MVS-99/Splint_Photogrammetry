@@ -1,0 +1,50 @@
+.tutorial {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the video horizontally */
+    align-items: center; /* Center the video vertically */
+    background-color: rgba(115, 149, 174, 0.25);; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    margin: 20px;
+    flex-wrap: 1;
+  }
+  
+  .tutorial__video {
+    position: relative;
+  }
+  
+  /* When the viewport is 600px or smaller, reduce the margin */
+  @media screen and (max-width: 600px) {
+    .tutorial {
+      margin: 10px;
+    }
+  }
+
+  .tutorial__title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    background-image: linear-gradient(64.5deg, #005F9F 14.7%, #3dbff6 88.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .tutorial__text {
+    text-align: justify;
+    font-size: 1rem;  
+    margin-bottom: 1rem;
+    white-space: pre-wrap;  /* respect whitespace */
+    overflow-wrap: break-word;  /* break words properly at the end of lines */
+    flex-shrink: 1;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .tutorial__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;  
+    height: auto;
+  }

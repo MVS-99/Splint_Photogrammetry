@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import Slideshow from "./components/Slideshow";
 import "./App.css";
+import Tutorial from "./components/Tutorial";
+import WebFont from "webfontloader";
 
 function App() {
   const [selectedFiles, setSelectedFiles] = useState(null);
   const [previews, setPreviews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [lightingGrade, setLightingGrade] = useState(2);
+  const [comment, setComment] = useState('');
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Merriweather:400,700', 'serif']
+      }
+    })
+  })
 
   const handleFileSelect = (e) => {
     const files = e.target.files;
@@ -36,6 +48,7 @@ function App() {
     const formData = new FormData();
     Array.from(selectedFiles).forEach((file) => {
       formData.append("files", file);
+      formData.append("lightingGrade", lightingGrade);
     });
 
     try {
@@ -84,6 +97,18 @@ function App() {
                 <label htmlFor="files" className="upload-label">
                   Choose Images
                 </label>
+                {selectedFiles && (
+                  <div>
+                    <p>How would you grade the lighting in the room?</p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="3"
+                      value={lightingGrade}
+                      onChange={(e) => setLightingGrade(e.target.value)}
+                    />
+                  </div>
+                )}
                 <button type="submit" className="upload-button">
                   Upload
                 </button>
@@ -93,6 +118,7 @@ function App() {
           )}
         </div>
       )}
+      <Tutorial />
       <Footer />
     </div>
   );
