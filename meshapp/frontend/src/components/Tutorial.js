@@ -7,7 +7,7 @@ function Tutorial() {
 
   useEffect(() => {
     const footerHeight = document.querySelector('.footer').offsetHeight;
-    const tutorialHeight = footerHeight * 2; // height is 1.25 times footer height
+    const tutorialHeight = footerHeight * 1.75; // height is 1.25 times footer height
     const tutorialWidth = tutorialHeight * (16 / 9); // maintain 16:9 aspect ratio
 
     setIframeStyle({
@@ -31,9 +31,9 @@ function Tutorial() {
             Finalmente, fijate bien en los ajustes de la cámara cuando tomas la foto. Evita el desenfoque por movimiento utilizando trípodes o una velocidad de obturación rápida.
             Para garantizar una gran profundida de campo, intenta reducir el diafragma (f alta) y reducir el ajuste iso para limitar el ruido <br />
         </p>
-        <img className="tutorial__image" src={isoexplanation} alt="Description" style={iframeStyle} />
+        <img className="tutorial__image" src={isoexplanation} alt="Description" />
         <p className='tutorial__text'>
-            Una vez tus imágenes estén listas, subelas y el software de Meshroom se encargará del resto, ofreciendo varias opciones y configuraciones
+            <br/>Una vez tus imágenes estén listas, subelas y el software de Meshroom se encargará del resto, ofreciendo varias opciones y configuraciones
             dependiendo de la información que respondas en el cuestionario y la que sea directamente procesada de las imágenes.
         </p>
         <h2 className="tutorial__title">Tutoriales:</h2>

@@ -14,7 +14,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [lightingGrade, setLightingGrade] = useState(2);
-  const [comment, setComment] = useState('');
+  const [imagesUploaded, setImagesUploaded] = useState(false);
+  const [photoRange, setPhotoRange] = useState(0);
+  const [orientationChange, setOrientationChange] = useState(false);
 
   useEffect(() => {
     WebFont.load({
@@ -33,6 +35,15 @@ function App() {
     setSelectedFiles(files);
     const previewURLs = Array.from(files).map((file) => URL.createObjectURL(file));
     setPreviews(previewURLs);
+    setImagesUploaded(true);
+
+    if (files.length >= 20 && files.length <= 40) {
+      setPhotoRange(0);
+    } else if (files.length > 40 && files.length <= 60) {
+      setPhotoRange(1);
+    } else{
+      setPhotoRange(2);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -80,8 +91,8 @@ function App() {
         <div className="content">
           {showSuccess ? (
             <div className="success-message">
-              <h2>Success!</h2>
-              <p>Your 3D mesh has been generated successfully. It will be downloaded shortly.</p>
+              <h2>¡Se ha inalizado con exito!</h2>
+              <p>Tú modelo tridimensional se ha generado con exito. Recuerda que para optimos resultados deberás utilizar herramientas de retopología</p>
             </div>
           ) : (
             <div className="upload-form-container">
@@ -99,14 +110,57 @@ function App() {
                 </label>
                 {selectedFiles && (
                   <div>
-                    <p>How would you grade the lighting in the room?</p>
-                    <input
-                      type="range"
-                      min="0"
-                      max="3"
-                      value={lightingGrade}
-                      onChange={(e) => setLightingGrade(e.target.value)}
-                    />
+                    <p>¿Cómo calificarías la iluminación de las fotos?</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+                      <input
+                        type="range"
+                        min="0"
+                        max="4"
+                        value={lightingGrade}
+                        onChange={(e) => setLightingGrade(e.target.value)}
+                        list="lighting-grades"
+                      />
+                      <datalist id="lighting-grades">
+                        <option value="0" label="Muy oscuras"/>
+                        <option value="1" />
+                        <option value="2" />
+                        <option value="3" />
+                        <option value="4" label="Muy iluminadas"/>
+                      </datalist>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span>Muy oscuras</span>
+                        <span>Muy iluminadas</span>
+                      </div>
+                    </div>
+                    <p><br></br>Rango de fotos:</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+                      <input
+                        type="range"
+                        min="0"
+                        max="2"
+                        value={photoRange}
+                        disabled
+                        list="photo-ranges"
+                      />
+                      <datalist id="photo-ranges">
+                        <option value="0" label="20-40"/>
+                        <option value="1" label="40-60"/>
+                        <option value="2" label="60+"/>
+                      </datalist>
+                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <span>20-40</span>
+                        <span>40-60</span>
+                        <span>60+</span>
+                      </div>
+                    </div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={orientationChange}
+                        onChange={() => setOrientationChange(!orientationChange)}
+                      />
+                      ¿El data-set contienen fotos con distinta orientación?
+                    </label>
                   </div>
                 )}
                 <button type="submit" className="upload-button">
@@ -118,7 +172,7 @@ function App() {
           )}
         </div>
       )}
-      <Tutorial />
+      {!imagesUploaded && <Tutorial />}
       <Footer />
     </div>
   );

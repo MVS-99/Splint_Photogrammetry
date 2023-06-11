@@ -28,6 +28,9 @@ def upload_file():
         if 'file0' not in request.files:
             return 'No files uploaded', 400
 
+        lightingGrade = request.form.get('lightingGrade')
+        photoRange = request.form.get('photoRange')
+
         # Recibir los archivos subido por la app de React
         files = [request.files[f'file{i}'] for i in range(len(request.files))]
 
