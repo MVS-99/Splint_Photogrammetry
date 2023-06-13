@@ -57,8 +57,8 @@ function App() {
     setLoading(true);
 
     const formData = new FormData();
-    Array.from(selectedFiles).forEach((file) => {
-      formData.append("files", file);
+    Array.from(selectedFiles).forEach((file, index) => {
+      formData.append(`file${index}`, file);
       formData.append("lightingGrade", lightingGrade);
     });
 
@@ -78,6 +78,7 @@ function App() {
       }
     } catch (error) {
       setLoading(false);
+      console.error(error)
       alert("An error occurred while processing the images. Please try again.");
     }
   };

@@ -1,5 +1,7 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, send_from_directory
 from werkzeug.utils import secure_filename
+from flask_cors import CORS, cross_origin
+import shutil
 
 import zipfile
 import os
@@ -7,19 +9,35 @@ import subprocess
 
 app = Flask(__name__)
 
+CORS(app, origins=["http://localhost:3000"]) # Activar CORS
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, '..', 'temp_files', 'uploaded_photos')
 OUTPUT_FOLDER = os.path.join(BASE_DIR, '..', 'temp_files', 'meshroom_output')
 MESH_ZIP_PATH = os.path.join(BASE_DIR, '..', 'temp_files', 'mesh.zip')
 
+
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['OUTPUT_FOLDER'] = OUTPUT_FOLDER
 
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    os.makedirs(app.config['UPLOAD_FOLDER'])
+
+if not os.path.exists(app.config['OUTPUT_FOLDER']):
+    os.makedirs(app.config['OUTPUT_FOLDER'])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+def clean_up():
+    if os.path.exists(app.config['UPLOAD_FOLDER']):
+        shutil.rmtree(app.config['UPLOAD_FOLDER'])
+    if os.path.exists(app.config['OUTPUT_FOLDER']):
+        shutil.rmtree(app.config['OUTPUT_FOLDER'])
+    if os.path.exists(MESH_ZIP_PATH):
+        os.remove(MESH_ZIP_PATH)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -41,7 +59,7 @@ def upload_file():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         # Abrir Meshroom para las imágenes subidas
-        meshroom_command = f"~/Meshroom/meshroom_batch --input {UPLOAD_FOLDER} --output{OUTPUT_FOLDER}"
+        meshroom_command = f"~/Meshroom/meshroom_batch -i {UPLOAD_FOLDER} -o {OUTPUT_FOLDER}"
         subprocess.run(meshroom_command, shell=True)
 
         # Crear un ZIP con los archivos mesh generados
@@ -51,7 +69,10 @@ def upload_file():
                     zipf.write(os.path.join(root,file), os.path.relpath(os.path.join(root, file), OUTPUT_FOLDER))
 
         # Mandar el zip de vuelta
-        return send_file(MESH_ZIP_PATH, as_attachment=True, attachment_filename='mesh.zip')
+        return send_from_directory(directory=os.path.dirname(MESH_ZIP_PATH),
+                           filename=os.path.basename(MESH_ZIP_PATH), 
+                           as_attachment=True, 
+                           attachment_filename='mesh.zip')
 
 
 if __name__ == '__main__':
