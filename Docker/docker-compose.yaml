@@ -3,6 +3,8 @@ services:
     build: 
       context: ..
       dockerfile: Docker/Dockerfile.frontend
+    hostname: frontend
+    container_name: frontend
     volumes:
       - ../meshapp/frontend:/app
       - /app/node_modules
@@ -11,12 +13,15 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
     networks:
-      - app-network
+      app-network:
+        ipv4_address: 172.16.238.10
 
   backend:
     build: 
       context: ..
       dockerfile: Docker/Dockerfile.backend
+    container_name: backend
+    hostname: backend
     volumes:
       - ../meshapp/backend:/app
     ports:
@@ -24,8 +29,15 @@ services:
     environment:
       - FLASK_ENV=development
     networks:
-      - app-network
+      app-network:
+        ipv4_address: 172.16.238.11
+    runtime: nvidia
 
 networks:
   app-network:
+    name: app-network
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24

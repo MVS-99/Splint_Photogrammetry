@@ -9,7 +9,7 @@ import subprocess
 
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost:3000"]) # Activar CORS
+CORS(app) # Activar CORS
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, '..', 'temp_files', 'uploaded_photos')
@@ -55,7 +55,7 @@ def choose_pipeline(lighting_grade, photo_range, orientation_change):
     else:
         if not orientation_change:
             # If orientation is consistent, use Upright SIFT
-            return os.path.join(base_path, 'upright_sift.mg')
+            return os.path.join(base_path, 'sift_upright.mg')
         else:
             if photo_range == 2:  # +60
                 # Images of various scales or requiring higher precision, use Float SIFT
@@ -68,7 +68,7 @@ def choose_pipeline(lighting_grade, photo_range, orientation_change):
                 return os.path.join(base_path, 'akaze_mldb.mg')
 
 
-@app.route('/upload', methods=['POST'])
+@app.route('/', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
         # Comprobar que la request no viene vacia (doble capa de seguridad)
@@ -91,7 +91,7 @@ def upload_file():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         # Abrir Meshroom para las imágenes subidas
-        meshroom_command = f"~/Meshroom/meshroom_batch -p {pipeline} -i {UPLOAD_FOLDER} -o {OUTPUT_FOLDER}"
+        meshroom_command = f"/opt/Meshroom_bundle/meshroom_batch -p {pipeline} -i {UPLOAD_FOLDER} -o {OUTPUT_FOLDER}"
         print(meshroom_command)
         subprocess.run(meshroom_command, shell=True)
 
@@ -112,4 +112,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
