@@ -7,6 +7,8 @@ import Slideshow from "./components/Slideshow";
 import "./App.css";
 import Tutorial from "./components/Tutorial";
 import WebFont from "webfontloader";
+import {saveAs} from 'file-saver'
+
 
 function App() {
   const [selectedFiles, setSelectedFiles] = useState(null);
@@ -60,20 +62,26 @@ function App() {
     Array.from(selectedFiles).forEach((file, index) => {
       formData.append(`file${index}`, file);
       formData.append("lightingGrade", lightingGrade);
+      formData.append("orientationChange", orientationChange);
     });
 
     try {
       const response = await axios.post("http://localhost:5000/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
+        responseType: 'blob',
       });
 
       if (response.status === 200) {
+        const blob = new Blob([response.data], {type: 'application/zip'});
+        saveAs(blob, 'mesh.zip');
+
         setLoading(false);
         setShowSuccess(true);
         setTimeout(() => {
           setShowSuccess(false);
           setSelectedFiles(null);
           setPreviews([]);
+          setImagesUploaded(false);
         }, 60000);
       }
     } catch (error) {
@@ -92,8 +100,8 @@ function App() {
         <div className="content">
           {showSuccess ? (
             <div className="success-message">
-              <h2>¡Se ha inalizado con exito!</h2>
-              <p>Tú modelo tridimensional se ha generado con exito. Recuerda que para optimos resultados deberás utilizar herramientas de retopología</p>
+              <h2>¡Se ha finalizado con exito!</h2>
+              <p> Tú modelo tridimensional se ha generado con exito. Recuerda que para optimos resultados deberás utilizar herramientas de retopología<br></br></p>
             </div>
           ) : (
             <div className="upload-form-container">
