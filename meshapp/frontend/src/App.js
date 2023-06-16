@@ -63,6 +63,7 @@ function App() {
       formData.append(`file${index}`, file);
       formData.append("lightingGrade", lightingGrade);
       formData.append("orientationChange", orientationChange);
+      formData.append("photoRange", photoRange);
     });
 
     try {

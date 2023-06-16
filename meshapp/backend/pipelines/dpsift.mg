@@ -5,17 +5,18 @@
         "fileVersion": "1.1",
         "template": false,
         "nodesVersions": {
+            "Meshing": "7.0",
+            "ImageMatching": "2.0",
+            "MeshFiltering": "3.0",
+            "FeatureExtraction": "1.1",
             "DepthMapFilter": "3.0",
             "Texturing": "6.0",
-            "FeatureExtraction": "1.1",
-            "MeshFiltering": "3.0",
             "DepthMap": "3.0",
-            "CameraInit": "9.0",
-            "FeatureMatching": "2.0",
+            "PrepareDenseScene": "3.0",
             "StructureFromMotion": "2.0",
-            "ImageMatching": "2.0",
-            "Meshing": "7.0",
-            "PrepareDenseScene": "3.0"
+            "CameraInit": "9.0",
+            "Publish": "1.2",
+            "FeatureMatching": "2.0"
         }
     },
     "graph": {
@@ -622,6 +623,38 @@
             "outputs": {
                 "output": "{cache}/{nodeType}/{uid0}/"
             }
+        },
+        "Publish_1": {
+            "nodeType": "Publish",
+            "position": [
+                2273,
+                41
+            ],
+            "parallelization": {
+                "blockSize": 0,
+                "size": 3,
+                "split": 1
+            },
+            "uids": {
+                "0": "6fb864187515ab6046e456115e23daf5d76e5809"
+            },
+            "internalFolder": "{cache}/{nodeType}/{uid0}/",
+            "inputs": {
+                "inputFiles": [
+                    "{Texturing_1.outputMesh}",
+                    "{Texturing_1.outputMaterial}",
+                    "{Texturing_1.outputTextures}"
+                ],
+                "output": "",
+                "verboseLevel": "info"
+            },
+            "internalInputs": {
+                "invalidation": "",
+                "comment": "",
+                "label": "",
+                "color": ""
+            },
+            "outputs": {}
         }
     }
 }

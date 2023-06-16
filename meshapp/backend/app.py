@@ -42,6 +42,10 @@ def clean_up():
 def choose_pipeline(lighting_grade, photo_range, orientation_change):
     base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pipelines')
 
+    print(f'Lighting Grade: {lighting_grade}, type: {type(lighting_grade)}')
+    print(f'Photo Range: {photo_range}, type: {type(photo_range)}')
+    print(f'Orientation Change: {orientation_change}, type: {type(orientation_change)}')
+
     # If light is too bright or too dark (assuming values 0 and 4)
     if lighting_grade in {0, 4}:
         # Uneven light distribution, use AKAZE with LIOP
@@ -72,7 +76,7 @@ def upload_file():
             return 'No files uploaded', 400
 
         lightingGrade = int(request.form.get('lightingGrade'))
-        photoRange = request.form.get('photoRange')
+        photoRange = int(request.form.get('photoRange'))
         orientationChange = request.form.get('orientationChange') == 'true'
 
         pipeline = choose_pipeline(lightingGrade, photoRange, orientationChange)
@@ -88,6 +92,7 @@ def upload_file():
 
         # Abrir Meshroom para las imágenes subidas
         meshroom_command = f"~/Meshroom/meshroom_batch -p {pipeline} -i {UPLOAD_FOLDER} -o {OUTPUT_FOLDER}"
+        print(meshroom_command)
         subprocess.run(meshroom_command, shell=True)
 
         # Crear un ZIP con los archivos mesh generados

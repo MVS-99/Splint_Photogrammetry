@@ -5,25 +5,26 @@
         "fileVersion": "1.1",
         "template": false,
         "nodesVersions": {
-            "DepthMapFilter": "3.0",
-            "Texturing": "6.0",
-            "FeatureExtraction": "1.1",
-            "MeshFiltering": "3.0",
             "DepthMap": "3.0",
-            "CameraInit": "9.0",
-            "FeatureMatching": "2.0",
-            "StructureFromMotion": "2.0",
-            "ImageMatching": "2.0",
+            "PrepareDenseScene": "3.0",
             "Meshing": "7.0",
-            "PrepareDenseScene": "3.0"
+            "Texturing": "6.0",
+            "Publish": "1.2",
+            "CameraInit": "9.0",
+            "ImageMatching": "2.0",
+            "StructureFromMotion": "2.0",
+            "FeatureExtraction": "1.1",
+            "FeatureMatching": "2.0",
+            "MeshFiltering": "3.0",
+            "DepthMapFilter": "3.0"
         }
     },
     "graph": {
         "Texturing_1": {
             "nodeType": "Texturing",
             "position": [
-                2000,
-                0
+                2020,
+                -3
             ],
             "parallelization": {
                 "blockSize": 0,
@@ -622,6 +623,38 @@
             "outputs": {
                 "output": "{cache}/{nodeType}/{uid0}/"
             }
+        },
+        "Publish_1": {
+            "nodeType": "Publish",
+            "position": [
+                2272,
+                22
+            ],
+            "parallelization": {
+                "blockSize": 0,
+                "size": 3,
+                "split": 1
+            },
+            "uids": {
+                "0": "419ea315c594f87aaaa3d6292b61939941f4db9a"
+            },
+            "internalFolder": "{cache}/{nodeType}/{uid0}/",
+            "inputs": {
+                "inputFiles": [
+                    "{Texturing_1.outputMesh}",
+                    "{Texturing_1.outputMaterial}",
+                    "{Texturing_1.outputTextures}"
+                ],
+                "output": "",
+                "verboseLevel": "info"
+            },
+            "internalInputs": {
+                "invalidation": "",
+                "comment": "",
+                "label": "",
+                "color": ""
+            },
+            "outputs": {}
         }
     }
 }

@@ -6,13 +6,14 @@ WORKDIR /app
 
 # Copy package.json and package-lock.json before other files
 # Utilise Docker cache to save re-installing dependencies if unchanged
-COPY ./package*.json ./
+COPY ./meshapp/frontend/package*.json ./
 
 # Install app dependencies
+RUN npm cache clean --force
 RUN npm install
 
 # Copy the rest of your app's source code from your host to your image filesystem.
-COPY . .
+COPY ./meshapp/frontend .
 
 # Make port 3000 available to the outside
 EXPOSE 3000

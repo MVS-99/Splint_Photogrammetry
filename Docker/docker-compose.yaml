@@ -2,7 +2,7 @@ services:
   frontend:
     build: 
       context: ..
-      dockerfile: Dockerfile.frontend
+      dockerfile: Docker/Dockerfile.frontend
     volumes:
       - ../meshapp/frontend:/app
       - /app/node_modules
@@ -16,22 +16,13 @@ services:
   backend:
     build: 
       context: ..
-      dockerfile: Dockerfile.backend
+      dockerfile: Docker/Dockerfile.backend
     volumes:
-      - ./backend:/app
+      - ../meshapp/backend:/app
     ports:
       - 5000:5000
     environment:
       - FLASK_ENV=development
-    depends_on: 
-      - meshroom
-    networks:
-      - app-network
-
-  meshroom:
-    image: alicevision/meshroom:2023.1.0-av3.0.0-centos7-cuda11.3.1
-    volumes:
-      - ./meshroom:/meshroom
     networks:
       - app-network
 
