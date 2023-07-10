@@ -62,7 +62,7 @@ def choose_pipeline(lighting_grade, photo_range, orientation_change):
                 return os.path.join(base_path, 'sift_float.mg')
             elif photo_range == 1:  # 40-60
                 # Complex scenes with many features of interest, use Dense SIFT
-                return os.path.join(base_path, 'depsift.mg')
+                return os.path.join(base_path, 'dpsift.mg')
             elif photo_range == 0:  # 20-40
                 # General purpose, use AKAZE with MLDB
                 return os.path.join(base_path, 'akaze_mldb.mg')

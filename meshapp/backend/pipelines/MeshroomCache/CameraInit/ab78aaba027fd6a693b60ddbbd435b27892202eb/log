@@ -1,0 +1,40 @@
+[2023-07-06 13:08:13.522026] [0x00002df8] [trace]   Embedded OCIO configuration file: 'C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision/share/aliceVision/config.ocio' found.
+Program called with the following parameters:
+ * allowSingleView = 1
+ * allowedCameraModels = "pinhole,radial1,radial3,brown,fisheye4,fisheye1,3deanamorphic4,3deradial4,3declassicld"
+ * colorProfileDatabase = "" (default)
+ * defaultCameraModel = "" (default)
+ * defaultFieldOfView = 85
+ * defaultFocalLength = -1 (default)
+ * defaultFocalRatio = 1 (default)
+ * defaultOffsetX = 0 (default)
+ * defaultOffsetY = 0 (default)
+ * errorOnMissingColorProfile = 1 (default)
+ * groupCameraFallback =  Unknown Type "enum EGroupCameraFallback"
+ * imageFolder = "" (default)
+ * input = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/viewpoints.sfm"
+ * lensCorrectionProfileInfo = "${ALICEVISION_LENS_PROFILE_INFO}"
+ * lensCorrectionProfileSearchIgnoreCameraModel = 1
+ * maxCoresAvailable =  Unknown Type "unsigned int" (default)
+ * maxMemoryAvailable = 18446744073709551615 (default)
+ * output = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/cameraInit.sfm"
+ * rawColorInterpretation =  Unknown Type "enum aliceVision::image::ERawColorInterpretation"
+ * sensorDatabase = "C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision\share\aliceVision\cameraSensors.db"
+ * verboseLevel = "info"
+ * viewIdMethod =  Unknown Type "enum aliceVision::sfmDataIO::EViewIdMethod"
+ * viewIdRegex = ".*?(\d+)" (default)
+
+Hardware : 
+	Detected core count : 20
+	OpenMP will use 20 cores
+	Detected available memory : 10345 Mo
+
+[13:08:13.557027][info] 0 profile(s) stored in the LCP database.
+[13:08:13.692211][info] CameraInit report:
+	- # Views: 24
+	   - # with focal length initialization (from metadata): 24
+	   - # without metadata: 0
+	   - # with DCP color calibration (raw images only): 0
+	   - # with LCP lens distortion initialization: 0
+	   - # with LCP vignetting calibration: 0
+	- # Cameras Intrinsics: 1

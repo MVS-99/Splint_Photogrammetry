@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "execMode": "LOCAL",
+    "nodeName": "FeatureMatching_1",
+    "nodeType": "FeatureMatching",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_featureMatching  --input \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/0c6f3382f79d5572180bb2d341edc2d2ce29be2c/cameraInit.sfm\" --featuresFolders \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/40bc6167884905b32048ef0cddf2a45120d86ecc\" --imagePairsList \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/ImageMatching/161954eab6492896a91d9f36a2525ae59c173e9b/imageMatches.txt\" --describerTypes akaze_mldb --photometricMatchingMethod ANN_L2 --geometricEstimator acransac --geometricFilterType fundamental_matrix --distanceRatio 0.8 --maxIteration 2048 --geometricError 0.0 --knownPosesGeometricErrorMax 5.0 --minRequired2DMotion -1.0 --maxMatches 0 --savePutativeMatches False --crossMatching False --guidedMatching False --matchFromKnownCameraPoses False --exportDebugFiles False --verboseLevel info --output \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/b668172b1db2750b023640db73c8b5fcc66ba8e7\" --rangeStart 20 --rangeSize 20",
+    "env": null,
+    "startDateTime": "2023-07-06 13:13:28.218775",
+    "endDateTime": "2023-07-06 13:13:30.384901",
+    "elapsedTime": 2.166125774383545,
+    "hostname": "SIVISPACEM",
+    "sessionUid": "46b80cf4-1bed-11ee-9f7c-8cb87e0ea712",
+    "returnCode": 0,
+    "elapsedTimeStr": "0:00:02.166126"
+}

@@ -1,0 +1,185 @@
+[2023-07-06 13:13:35.392523] [0x00001410] [trace]   Embedded OCIO configuration file: 'C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision/share/aliceVision/config.ocio' found.
+Program called with the following parameters:
+ * crossMatching = 0
+ * describerTypes = "akaze_mldb"
+ * distanceRatio = 0.8
+ * exportDebugFiles = 0
+ * featuresFolders =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/40bc6167884905b32048ef0cddf2a45120d86ecc]
+ * geometricError = 0
+ * geometricEstimator =  Unknown Type "enum aliceVision::robustEstimation::ERobustEstimator"
+ * geometricFilterType = "fundamental_matrix"
+ * guidedMatching = 0
+ * imagePairsList =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/ImageMatching/161954eab6492896a91d9f36a2525ae59c173e9b/imageMatches.txt]
+ * input = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/0c6f3382f79d5572180bb2d341edc2d2ce29be2c/cameraInit.sfm"
+ * knownPosesGeometricErrorMax = 5
+ * matchFilePerImage = 0 (default)
+ * matchFromKnownCameraPoses = 0
+ * maxCoresAvailable =  Unknown Type "unsigned int" (default)
+ * maxIteration = 2048
+ * maxMatches = 0
+ * maxMemoryAvailable = 18446744073709551615 (default)
+ * minRequired2DMotion = -1
+ * output = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/b668172b1db2750b023640db73c8b5fcc66ba8e7"
+ * photometricMatchingMethod = "ANN_L2"
+ * randomSeed = 5489 (default)
+ * rangeSize = 20
+ * rangeStart = 120
+ * savePutativeMatches = 0
+ * useGridSort = 1 (default)
+ * verboseLevel = "info"
+
+Hardware : 
+	Detected core count : 20
+	OpenMP will use 20 cores
+	Detected available memory : 10550 Mo
+
+[13:13:35.428523][info] Load pair list from file: //wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/ImageMatching/161954eab6492896a91d9f36a2525ae59c173e9b/imageMatches.txt
+[13:13:35.440523][info] loadPairs: image pair (1812901642, 1847073189) added.
+[13:13:35.440523][info] loadPairs: image pair (1812901642, 1889844248) added.
+[13:13:35.440523][info] loadPairs: image pair (1812901642, 1890966247) added.
+[13:13:35.441523][info] loadPairs: image pair (1812901642, 1899878787) added.
+[13:13:35.441523][info] loadPairs: image pair (1812901642, 1905295286) added.
+[13:13:35.441523][info] loadPairs: image pair (1812901642, 1930272984) added.
+[13:13:35.441523][info] loadPairs: image pair (1812901642, 1963348489) added.
+[13:13:35.441523][info] loadPairs: image pair (1812901642, 1983265070) added.
+[13:13:35.442523][info] loadPairs: image pair (1812901642, 2037031379) added.
+[13:13:35.442523][info] loadPairs: image pair (1812901642, 2063224989) added.
+[13:13:35.442523][info] loadPairs: image pair (1812901642, 2068307099) added.
+[13:13:35.442523][info] loadPairs: image pair (1812901642, 2071467912) added.
+[13:13:35.442523][info] loadPairs: image pair (1812901642, 2072992088) added.
+[13:13:35.443523][info] loadPairs: image pair (1812901642, 2079979104) added.
+[13:13:35.443523][info] loadPairs: image pair (1812901642, 2116456553) added.
+[13:13:35.443523][info] loadPairs: image pair (1812901642, 2136008698) added.
+[13:13:35.443523][info] loadPairs: image pair (1847073189, 1889844248) added.
+[13:13:35.443523][info] loadPairs: image pair (1847073189, 1890966247) added.
+[13:13:35.444523][info] loadPairs: image pair (1847073189, 1899878787) added.
+[13:13:35.444523][info] loadPairs: image pair (1847073189, 1905295286) added.
+[13:13:35.444523][info] loadPairs: image pair (1847073189, 1930272984) added.
+[13:13:35.444523][info] loadPairs: image pair (1847073189, 1963348489) added.
+[13:13:35.445526][info] loadPairs: image pair (1847073189, 1983265070) added.
+[13:13:35.445526][info] loadPairs: image pair (1847073189, 2037031379) added.
+[13:13:35.445526][info] loadPairs: image pair (1847073189, 2063224989) added.
+[13:13:35.445526][info] loadPairs: image pair (1847073189, 2068307099) added.
+[13:13:35.445526][info] loadPairs: image pair (1847073189, 2071467912) added.
+[13:13:35.446523][info] loadPairs: image pair (1847073189, 2072992088) added.
+[13:13:35.446523][info] loadPairs: image pair (1847073189, 2079979104) added.
+[13:13:35.446523][info] loadPairs: image pair (1847073189, 2116456553) added.
+[13:13:35.446523][info] loadPairs: image pair (1847073189, 2136008698) added.
+[13:13:35.446523][info] loadPairs: image pair (1889844248, 1890966247) added.
+[13:13:35.447523][info] loadPairs: image pair (1889844248, 1899878787) added.
+[13:13:35.447523][info] loadPairs: image pair (1889844248, 1905295286) added.
+[13:13:35.447523][info] loadPairs: image pair (1889844248, 1930272984) added.
+[13:13:35.447523][info] loadPairs: image pair (1889844248, 1963348489) added.
+[13:13:35.448523][info] loadPairs: image pair (1889844248, 1983265070) added.
+[13:13:35.448523][info] loadPairs: image pair (1889844248, 2037031379) added.
+[13:13:35.448523][info] loadPairs: image pair (1889844248, 2063224989) added.
+[13:13:35.448523][info] loadPairs: image pair (1889844248, 2068307099) added.
+[13:13:35.448523][info] loadPairs: image pair (1889844248, 2071467912) added.
+[13:13:35.449524][info] loadPairs: image pair (1889844248, 2072992088) added.
+[13:13:35.449524][info] loadPairs: image pair (1889844248, 2079979104) added.
+[13:13:35.449524][info] loadPairs: image pair (1889844248, 2116456553) added.
+[13:13:35.449524][info] loadPairs: image pair (1889844248, 2136008698) added.
+[13:13:35.450523][info] loadPairs: image pair (1890966247, 1899878787) added.
+[13:13:35.450523][info] loadPairs: image pair (1890966247, 1905295286) added.
+[13:13:35.450523][info] loadPairs: image pair (1890966247, 1930272984) added.
+[13:13:35.450523][info] loadPairs: image pair (1890966247, 1963348489) added.
+[13:13:35.450523][info] loadPairs: image pair (1890966247, 1983265070) added.
+[13:13:35.451523][info] loadPairs: image pair (1890966247, 2037031379) added.
+[13:13:35.451523][info] loadPairs: image pair (1890966247, 2063224989) added.
+[13:13:35.451523][info] loadPairs: image pair (1890966247, 2068307099) added.
+[13:13:35.451523][info] loadPairs: image pair (1890966247, 2071467912) added.
+[13:13:35.452523][info] loadPairs: image pair (1890966247, 2072992088) added.
+[13:13:35.452523][info] loadPairs: image pair (1890966247, 2079979104) added.
+[13:13:35.452523][info] loadPairs: image pair (1890966247, 2116456553) added.
+[13:13:35.452523][info] loadPairs: image pair (1890966247, 2136008698) added.
+[13:13:35.452523][info] loadPairs: image pair (1899878787, 1905295286) added.
+[13:13:35.453523][info] loadPairs: image pair (1899878787, 1930272984) added.
+[13:13:35.453523][info] loadPairs: image pair (1899878787, 1963348489) added.
+[13:13:35.453523][info] loadPairs: image pair (1899878787, 1983265070) added.
+[13:13:35.453523][info] loadPairs: image pair (1899878787, 2037031379) added.
+[13:13:35.454523][info] loadPairs: image pair (1899878787, 2063224989) added.
+[13:13:35.454523][info] loadPairs: image pair (1899878787, 2068307099) added.
+[13:13:35.454523][info] loadPairs: image pair (1899878787, 2071467912) added.
+[13:13:35.454523][info] loadPairs: image pair (1899878787, 2072992088) added.
+[13:13:35.454523][info] loadPairs: image pair (1899878787, 2079979104) added.
+[13:13:35.455523][info] loadPairs: image pair (1899878787, 2116456553) added.
+[13:13:35.455523][info] loadPairs: image pair (1899878787, 2136008698) added.
+[13:13:35.455523][info] loadPairs: image pair (1905295286, 1930272984) added.
+[13:13:35.455523][info] loadPairs: image pair (1905295286, 1963348489) added.
+[13:13:35.455523][info] loadPairs: image pair (1905295286, 1983265070) added.
+[13:13:35.456523][info] loadPairs: image pair (1905295286, 2037031379) added.
+[13:13:35.456523][info] loadPairs: image pair (1905295286, 2063224989) added.
+[13:13:35.456523][info] loadPairs: image pair (1905295286, 2068307099) added.
+[13:13:35.456523][info] loadPairs: image pair (1905295286, 2071467912) added.
+[13:13:35.457523][info] loadPairs: image pair (1905295286, 2072992088) added.
+[13:13:35.457523][info] loadPairs: image pair (1905295286, 2079979104) added.
+[13:13:35.457523][info] loadPairs: image pair (1905295286, 2116456553) added.
+[13:13:35.457523][info] loadPairs: image pair (1905295286, 2136008698) added.
+[13:13:35.458525][info] loadPairs: image pair (1930272984, 1963348489) added.
+[13:13:35.458525][info] loadPairs: image pair (1930272984, 1983265070) added.
+[13:13:35.458525][info] loadPairs: image pair (1930272984, 2037031379) added.
+[13:13:35.458525][info] loadPairs: image pair (1930272984, 2063224989) added.
+[13:13:35.459524][info] loadPairs: image pair (1930272984, 2068307099) added.
+[13:13:35.459524][info] loadPairs: image pair (1930272984, 2071467912) added.
+[13:13:35.459524][info] loadPairs: image pair (1930272984, 2072992088) added.
+[13:13:35.459524][info] loadPairs: image pair (1930272984, 2079979104) added.
+[13:13:35.459524][info] loadPairs: image pair (1930272984, 2116456553) added.
+[13:13:35.460523][info] loadPairs: image pair (1930272984, 2136008698) added.
+[13:13:35.460523][info] loadPairs: image pair (1963348489, 1983265070) added.
+[13:13:35.460523][info] loadPairs: image pair (1963348489, 2037031379) added.
+[13:13:35.460523][info] loadPairs: image pair (1963348489, 2063224989) added.
+[13:13:35.461524][info] loadPairs: image pair (1963348489, 2068307099) added.
+[13:13:35.461524][info] loadPairs: image pair (1963348489, 2071467912) added.
+[13:13:35.461524][info] loadPairs: image pair (1963348489, 2072992088) added.
+[13:13:35.461524][info] loadPairs: image pair (1963348489, 2079979104) added.
+[13:13:35.462523][info] loadPairs: image pair (1963348489, 2116456553) added.
+[13:13:35.462523][info] loadPairs: image pair (1963348489, 2136008698) added.
+[13:13:35.462523][info] loadPairs: image pair (1983265070, 2037031379) added.
+[13:13:35.462523][info] loadPairs: image pair (1983265070, 2063224989) added.
+[13:13:35.463523][info] loadPairs: image pair (1983265070, 2068307099) added.
+[13:13:35.463523][info] loadPairs: image pair (1983265070, 2071467912) added.
+[13:13:35.463523][info] loadPairs: image pair (1983265070, 2072992088) added.
+[13:13:35.463523][info] loadPairs: image pair (1983265070, 2079979104) added.
+[13:13:35.463523][info] loadPairs: image pair (1983265070, 2116456553) added.
+[13:13:35.464523][info] loadPairs: image pair (1983265070, 2136008698) added.
+[13:13:35.464523][info] loadPairs: image pair (2037031379, 2063224989) added.
+[13:13:35.464523][info] loadPairs: image pair (2037031379, 2068307099) added.
+[13:13:35.464523][info] loadPairs: image pair (2037031379, 2071467912) added.
+[13:13:35.465524][info] loadPairs: image pair (2037031379, 2072992088) added.
+[13:13:35.465524][info] loadPairs: image pair (2037031379, 2079979104) added.
+[13:13:35.465524][info] loadPairs: image pair (2037031379, 2116456553) added.
+[13:13:35.465524][info] loadPairs: image pair (2037031379, 2136008698) added.
+[13:13:35.466523][info] loadPairs: image pair (2063224989, 2068307099) added.
+[13:13:35.466523][info] loadPairs: image pair (2063224989, 2071467912) added.
+[13:13:35.466523][info] loadPairs: image pair (2063224989, 2072992088) added.
+[13:13:35.466523][info] loadPairs: image pair (2063224989, 2079979104) added.
+[13:13:35.466523][info] loadPairs: image pair (2063224989, 2116456553) added.
+[13:13:35.467523][info] loadPairs: image pair (2063224989, 2136008698) added.
+[13:13:35.467523][info] loadPairs: image pair (2068307099, 2071467912) added.
+[13:13:35.467523][info] loadPairs: image pair (2068307099, 2072992088) added.
+[13:13:35.467523][info] loadPairs: image pair (2068307099, 2079979104) added.
+[13:13:35.467523][info] loadPairs: image pair (2068307099, 2116456553) added.
+[13:13:35.468523][info] loadPairs: image pair (2068307099, 2136008698) added.
+[13:13:35.468523][info] loadPairs: image pair (2071467912, 2072992088) added.
+[13:13:35.468523][info] loadPairs: image pair (2071467912, 2079979104) added.
+[13:13:35.468523][info] loadPairs: image pair (2071467912, 2116456553) added.
+[13:13:35.469527][info] loadPairs: image pair (2071467912, 2136008698) added.
+[13:13:35.469527][info] loadPairs: image pair (2072992088, 2079979104) added.
+[13:13:35.469527][info] loadPairs: image pair (2072992088, 2116456553) added.
+[13:13:35.469527][info] loadPairs: image pair (2072992088, 2136008698) added.
+[13:13:35.469527][info] loadPairs: image pair (2079979104, 2116456553) added.
+[13:13:35.470527][info] loadPairs: image pair (2079979104, 2136008698) added.
+[13:13:35.470527][info] loadPairs: image pair (2116456553, 2136008698) added.
+[13:13:35.470527][info] Number of pairs: 136
+[13:13:35.470527][info] There are 137 views and 136 image pairs.
+[13:13:35.471527][info] Load features and descriptors
+Loading regions
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+*******[13:13:35.638559][info] Putative matches (unknown poses): 136 image pairs.
+[13:13:35.639559][info] akaze_mldb Regions Matching
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+[13:13:35.645559][info] No putative feature matches.

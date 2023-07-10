@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "execMode": "LOCAL",
+    "nodeName": "FeatureExtraction_1",
+    "nodeType": "FeatureExtraction",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_featureExtraction  --input \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/cameraInit.sfm\" --masksFolder \"\" --describerTypes akaze_mldb --describerPreset normal --describerQuality high --contrastFiltering GridSort --gridFiltering True --forceCpuExtraction True --maxThreads 0 --verboseLevel info --output \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/7210708493f7f574d73f2c669ccf14add43ac1fb\" --rangeStart 0 --rangeSize 40",
+    "env": null,
+    "startDateTime": "2023-07-06 13:08:14.303036",
+    "endDateTime": "2023-07-06 13:08:48.258647",
+    "elapsedTime": 33.95561099052429,
+    "hostname": "SIVISPACEM",
+    "sessionUid": "46b80cf4-1bed-11ee-9f7c-8cb87e0ea712",
+    "returnCode": 0,
+    "elapsedTimeStr": "0:00:33.955611"
+}

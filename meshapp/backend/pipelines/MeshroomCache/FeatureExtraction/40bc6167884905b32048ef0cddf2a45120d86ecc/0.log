@@ -1,0 +1,145 @@
+[2023-07-06 13:10:19.156156] [0x000069c8] [trace]   Embedded OCIO configuration file: 'C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision/share/aliceVision/config.ocio' found.
+Program called with the following parameters:
+ * contrastFiltering =  Unknown Type "enum aliceVision::feature::EFeatureConstrastFiltering"
+ * describerPreset =  Unknown Type "enum aliceVision::feature::EImageDescriberPreset"
+ * describerQuality =  Unknown Type "enum aliceVision::feature::EFeatureQuality"
+ * describerTypes = "akaze_mldb"
+ * forceCpuExtraction = 1
+ * gridFiltering = 1
+ * input = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/0c6f3382f79d5572180bb2d341edc2d2ce29be2c/cameraInit.sfm"
+ * masksFolder = ""
+ * maxCoresAvailable =  Unknown Type "unsigned int" (default)
+ * maxMemoryAvailable = 18446744073709551615 (default)
+ * maxNbFeatures = 0 (default)
+ * maxThreads = 0
+ * output = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/40bc6167884905b32048ef0cddf2a45120d86ecc"
+ * rangeSize = 40
+ * rangeStart = 0
+ * relativePeakThreshold = 0.02 (default)
+ * verboseLevel = "info"
+
+Hardware : 
+	Detected core count : 20
+	OpenMP will use 20 cores
+	Detected available memory : 10265 Mo
+
+[13:10:19.161158][info] CUDA-Enabled GPU.
+Device information:
+	- id:                      0
+	- name:                    NVIDIA GeForce RTX 3080
+	- compute capability:      8.6
+	- clock frequency (kHz):   1740000
+	- total device memory:     10239 MB 
+	- device memory available: 9059 MB 
+	- per-block shared memory: 49152
+	- warp size:               32
+	- max threads per block:   1024
+	- max threads per SM(X):   1536
+	- max block sizes:         {1024,1024,64}
+	- max grid sizes:          {2147483647,65535,65535}
+	- max 2D array texture:    {131072,65536}
+	- max 3D array texture:    {16384,16384,16384}
+	- max 2D linear texture:   {131072,65000,2097120}
+	- max 2D layered texture:  {32768,32768,2048}
+	- number of SM(x)s:        68
+	- registers per SM(x):     65536
+	- registers per block:     65536
+	- concurrent kernels:      yes
+	- mapping host memory:     yes
+	- unified addressing:      yes
+	- texture alignment:       512 byte
+	- pitch alignment:         32 byte
+CUDA build version: 11.6
+0
+[13:10:19.353691][info] Job max memory consumption for one image: 2369 MB
+[13:10:19.354692][info] Memory information: 
+	- Total RAM:     31.7853 GB
+	- Free RAM:      9.9135 GB
+	- Available RAM: 9.9135 GB
+	- Total swap:    131072 GB
+	- Free swap:     131015 GB
+[13:10:19.354692][info] Max number of threads regarding memory usage: 3
+[13:10:19.354692][warning] More than half of the RAM is used by other applications. It would be more efficient to close them.
+[13:10:19.354692][warning]  => 22 GB are used by other applications for a total RAM capacity of 32 GB.
+[13:10:19.354692][info] # threads for extraction: 3
+[13:10:19.501245][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190438.jpg' [cpu]
+[13:10:19.501245][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190354.jpg' [cpu]
+[13:10:19.510245][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190614.jpg' [cpu]
+[13:10:23.310586][info]       426 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190614.jpg'
+[13:10:23.451104][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190433.jpg' [cpu]
+[13:10:23.470103][info]       11097 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190438.jpg'
+[13:10:23.533008][info]       4873 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190354.jpg'
+[13:10:23.614524][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190610.jpg' [cpu]
+[13:10:23.728256][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190350.jpg' [cpu]
+[13:10:27.481221][info]       7488 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190433.jpg'
+[13:10:27.543727][info]       523 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190610.jpg'
+[13:10:27.619247][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190242.jpg' [cpu]
+[13:10:27.706230][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190430.jpg' [cpu]
+[13:10:28.141128][info]       4400 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190350.jpg'
+[13:10:28.343185][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190606.jpg' [cpu]
+[13:10:31.440549][info]       3411 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190242.jpg'
+[13:10:31.462549][info]       1698 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190430.jpg'
+[13:10:31.586073][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190359.jpg' [cpu]
+[13:10:31.642593][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190432.jpg' [cpu]
+[13:10:32.417425][info]       748 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190606.jpg'
+[13:10:32.585329][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190426(0).jpg' [cpu]
+[13:10:35.387587][info]       729 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190359.jpg'
+[13:10:35.529653][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190239.jpg' [cpu]
+[13:10:35.533653][info]       8616 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190432.jpg'
+[13:10:35.670208][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190327.jpg' [cpu]
+[13:10:36.275892][info]       3248 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190426(0).jpg'
+[13:10:36.460929][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190617.jpg' [cpu]
+[13:10:39.335035][info]       4220 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190239.jpg'
+[13:10:39.349035][info]       3266 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190327.jpg'
+[13:10:39.484568][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190257.jpg' [cpu]
+[13:10:39.500073][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190333.jpg' [cpu]
+[13:10:40.206804][info]       3647 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190617.jpg'
+[13:10:40.404386][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190241.jpg' [cpu]
+[13:10:43.255190][info]       3906 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190257.jpg'
+[13:10:43.275193][info]       3995 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190333.jpg'
+[13:10:43.428256][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190404.jpg' [cpu]
+[13:10:43.462255][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190523.jpg' [cpu]
+[13:10:44.145222][info]       2994 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190241.jpg'
+[13:10:44.337801][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190431.jpg' [cpu]
+[13:10:47.209868][info]       908 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190404.jpg'
+[13:10:47.213877][info]       1638 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190523.jpg'
+[13:10:47.390399][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190358.jpg' [cpu]
+[13:10:47.398402][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190554.jpg' [cpu]
+[13:10:48.197194][info]       9077 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190431.jpg'
+[13:10:48.349218][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190420.jpg' [cpu]
+[13:10:51.121560][info]       700 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190358.jpg'
+[13:10:51.127561][info]       1948 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190554.jpg'
+[13:10:51.311772][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190250.jpg' [cpu]
+[13:10:51.317775][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190428.jpg' [cpu]
+[13:10:51.982465][info]       4691 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190420.jpg'
+[13:10:52.157501][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190458.jpg' [cpu]
+[13:10:54.824861][info]       656 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190428.jpg'
+[13:10:54.914679][info]       1845 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190250.jpg'
+[13:10:54.963194][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190437.jpg' [cpu]
+[13:10:55.073591][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190334(0).jpg' [cpu]
+[13:10:55.942914][info]       315 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190458.jpg'
+[13:10:56.162834][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190244.jpg' [cpu]
+[13:10:58.800824][info]       4232 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190334(0).jpg'
+[13:10:58.906340][info]       9970 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190437.jpg'
+[13:10:58.941851][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190322.jpg' [cpu]
+[13:10:59.071012][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190305.jpg' [cpu]
+[13:11:00.221053][info]       2422 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190244.jpg'
+[13:11:00.375252][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190436(0).jpg' [cpu]
+[13:11:02.627833][info]       530 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190322.jpg'
+[13:11:02.773121][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190251.jpg' [cpu]
+[13:11:02.781121][info]       3218 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190305.jpg'
+[13:11:02.919158][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190354(0).jpg' [cpu]
+[13:11:04.480083][info]       2467 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190436(0).jpg'
+[13:11:04.668121][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190247.jpg' [cpu]
+[13:11:06.501949][info]       1361 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190251.jpg'
+[13:11:06.562456][info]       2807 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190354(0).jpg'
+[13:11:06.645984][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190616.jpg' [cpu]
+[13:11:06.746497][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190547.jpg' [cpu]
+[13:11:08.685634][info]       2317 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190247.jpg'
+[13:11:08.847275][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190348.jpg' [cpu]
+[13:11:10.313515][info]       2910 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190616.jpg'
+[13:11:10.346517][info]       2832 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190547.jpg'
+[13:11:10.458028][info] Extracting akaze_mldb features from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190456.jpg' [cpu]
+[13:11:12.142996][info]       3326 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190348.jpg'
+[13:11:12.934078][info]       889 akaze_mldb features extracted from view 'C:/Users/manue/Desktop/TFG -- IMPORTANTE/second_run/20230517_190456.jpg'
+[13:11:12.937079][info] Task done in (s): 53.588000

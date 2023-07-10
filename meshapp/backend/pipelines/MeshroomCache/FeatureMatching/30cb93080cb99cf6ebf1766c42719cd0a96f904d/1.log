@@ -1,0 +1,55 @@
+[2023-07-06 13:08:50.327191] [0x00002f20] [trace]   Embedded OCIO configuration file: 'C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision/share/aliceVision/config.ocio' found.
+Program called with the following parameters:
+ * crossMatching = 0
+ * describerTypes = "akaze_mldb"
+ * distanceRatio = 0.8
+ * exportDebugFiles = 0
+ * featuresFolders =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/7210708493f7f574d73f2c669ccf14add43ac1fb]
+ * geometricError = 0
+ * geometricEstimator =  Unknown Type "enum aliceVision::robustEstimation::ERobustEstimator"
+ * geometricFilterType = "fundamental_matrix"
+ * guidedMatching = 0
+ * imagePairsList =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/ImageMatching/a0fd57c4ffa1e864433e508c02381fafc6f65e8f/imageMatches.txt]
+ * input = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/cameraInit.sfm"
+ * knownPosesGeometricErrorMax = 5
+ * matchFilePerImage = 0 (default)
+ * matchFromKnownCameraPoses = 0
+ * maxCoresAvailable =  Unknown Type "unsigned int" (default)
+ * maxIteration = 2048
+ * maxMatches = 0
+ * maxMemoryAvailable = 18446744073709551615 (default)
+ * minRequired2DMotion = -1
+ * output = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/30cb93080cb99cf6ebf1766c42719cd0a96f904d"
+ * photometricMatchingMethod = "ANN_L2"
+ * randomSeed = 5489 (default)
+ * rangeSize = 20
+ * rangeStart = 20
+ * savePutativeMatches = 0
+ * useGridSort = 1 (default)
+ * verboseLevel = "info"
+
+Hardware : 
+	Detected core count : 20
+	OpenMP will use 20 cores
+	Detected available memory : 10346 Mo
+
+[13:08:50.347191][info] Load pair list from file: //wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/ImageMatching/a0fd57c4ffa1e864433e508c02381fafc6f65e8f/imageMatches.txt
+[13:08:50.350190][info] loadPairs: image pair (1645304695, 1905295286) added.
+[13:08:50.350190][info] loadPairs: image pair (1645304695, 1930272984) added.
+[13:08:50.350190][info] loadPairs: image pair (1645304695, 2037031379) added.
+[13:08:50.350190][info] loadPairs: image pair (1905295286, 1930272984) added.
+[13:08:50.351190][info] loadPairs: image pair (1905295286, 2037031379) added.
+[13:08:50.351190][info] loadPairs: image pair (1930272984, 2037031379) added.
+[13:08:50.351190][info] Number of pairs: 6
+[13:08:50.352190][info] There are 24 views and 6 image pairs.
+[13:08:50.352190][info] Load features and descriptors
+Loading regions
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+********[13:08:50.425219][info] Putative matches (unknown poses): 6 image pairs.
+[13:08:50.426305][info] akaze_mldb Regions Matching
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+[13:08:50.432305][info] No putative feature matches.

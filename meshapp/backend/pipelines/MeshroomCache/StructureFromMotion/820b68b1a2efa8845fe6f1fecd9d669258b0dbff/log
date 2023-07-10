@@ -1,0 +1,52 @@
+[2023-07-06 13:08:51.525428] [0x000018dc] [trace]   Embedded OCIO configuration file: 'C:\Users\manue\Desktop\Meshroom-2023.1.0\aliceVision/share/aliceVision/config.ocio' found.
+Program called with the following parameters:
+ * computeStructureColor = 1
+ * describerTypes = "akaze_mldb"
+ * extraInfoFolder = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff"
+ * featuresFolders =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/7210708493f7f574d73f2c669ccf14add43ac1fb]
+ * filterTrackForks = 0
+ * initialPairA = ""
+ * initialPairB = ""
+ * input = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/cameraInit.sfm"
+ * interFileExtension = ".abc"
+ * localBAGraphDistance = 1
+ * localizerEstimator =  Unknown Type "enum aliceVision::robustEstimation::ERobustEstimator"
+ * localizerEstimatorError = 0
+ * localizerEstimatorMaxIterations = 4096
+ * lockAllIntrinsics = 0
+ * lockScenePreviouslyReconstructed = 0
+ * matchesFolders =  = [//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/30cb93080cb99cf6ebf1766c42719cd0a96f904d]
+ * maxAngleInitialPair = 40
+ * maxCoresAvailable =  Unknown Type "unsigned int" (default)
+ * maxMemoryAvailable = 18446744073709551615 (default)
+ * maxNumberOfMatches = 0
+ * maxReprojectionError = 4
+ * minAngleForLandmark = 2
+ * minAngleForTriangulation = 3
+ * minAngleInitialPair = 5
+ * minInputTrackLength = 2
+ * minNbCamerasToRefinePrincipalPoint = 3
+ * minNumberOfMatches = 0
+ * minNumberOfObservationsForTriangulation = 2
+ * observationConstraint =  Unknown Type "enum aliceVision::sfm::EFeatureConstraint"
+ * output = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff/sfm.abc"
+ * outputViewsAndPoses = "//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff/cameras.sfm"
+ * randomSeed = 5489 (default)
+ * rigMinNbCamerasForCalibration = 20
+ * useLocalBA = 1
+ * useOnlyMatchesFromInputFolder = 0
+ * useRigConstraint = 1
+ * verboseLevel = "info"
+
+Hardware : 
+	Detected core count : 20
+	OpenMP will use 20 cores
+	Detected available memory : 10368 Mo
+
+Loading features
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+[13:08:51.934815][warning] No matches file loaded in: //wsl.localhost\Ubuntu\home\mvs\Splint_Photogrammetry\meshapp\backend\pipelines\MeshroomCache\FeatureMatching\30cb93080cb99cf6ebf1766c42719cd0a96f904d
+[13:08:51.936357][warning] 	- //wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/30cb93080cb99cf6ebf1766c42719cd0a96f904d
+[13:08:51.936869][error] Unable to load matches.

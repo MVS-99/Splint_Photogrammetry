@@ -1,0 +1,18 @@
+{
+    "status": "ERROR",
+    "execMode": "LOCAL",
+    "nodeName": "StructureFromMotion_1",
+    "nodeType": "StructureFromMotion",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_incrementalSfM  --input \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/CameraInit/ab78aaba027fd6a693b60ddbbd435b27892202eb/cameraInit.sfm\" --featuresFolders \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureExtraction/7210708493f7f574d73f2c669ccf14add43ac1fb\" --matchesFolders \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/FeatureMatching/30cb93080cb99cf6ebf1766c42719cd0a96f904d\" --describerTypes akaze_mldb --localizerEstimator acransac --observationConstraint Scale --localizerEstimatorMaxIterations 4096 --localizerEstimatorError 0.0 --lockScenePreviouslyReconstructed False --useLocalBA True --localBAGraphDistance 1 --maxNumberOfMatches 0 --minNumberOfMatches 0 --minInputTrackLength 2 --minNumberOfObservationsForTriangulation 2 --minAngleForTriangulation 3.0 --minAngleForLandmark 2.0 --maxReprojectionError 4.0 --minAngleInitialPair 5.0 --maxAngleInitialPair 40.0 --useOnlyMatchesFromInputFolder False --useRigConstraint True --rigMinNbCamerasForCalibration 20 --lockAllIntrinsics False --minNbCamerasToRefinePrincipalPoint 3 --filterTrackForks False --computeStructureColor True --initialPairA \"\" --initialPairB \"\" --interFileExtension .abc --verboseLevel info --output \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff/sfm.abc\" --outputViewsAndPoses \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff/cameras.sfm\" --extraInfoFolder \"//wsl.localhost/Ubuntu/home/mvs/Splint_Photogrammetry/meshapp/backend/pipelines/MeshroomCache/StructureFromMotion/820b68b1a2efa8845fe6f1fecd9d669258b0dbff\"",
+    "env": null,
+    "startDateTime": "2023-07-06 13:08:50.785927",
+    "endDateTime": "",
+    "elapsedTime": 0,
+    "hostname": "SIVISPACEM",
+    "sessionUid": "46b80cf4-1bed-11ee-9f7c-8cb87e0ea712",
+    "returnCode": 1,
+    "elapsedTimeStr": "0:00:00"
+}
